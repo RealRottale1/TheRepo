@@ -71,4 +71,4 @@ def test_get_available_spots_WhenOverFull():
     assert get_available_spots(garage) == 0
 
 def test_calculate_fee():
-    assert calculate_fee() == True
+    assert calculate_fee(10, 3) == True
