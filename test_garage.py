@@ -1,5 +1,5 @@
 import pytest
-from garage import enter_garage
+from garage import enter_garage, exit_garage
 
 def test_entergaragePass():
     garage = {
@@ -31,3 +31,6 @@ def test_entergarageInvalidTimeType():
     }
     with pytest.raises(TypeError):
         enter_garage(garage, 0, "2")
+
+def test_exitGarage():
+    assert exit_garage() == True
