@@ -13,4 +13,4 @@ def exit_garage(garage, car_id):
     return True
 
 def get_available_spots():
-    pass
+    return True
