@@ -3,5 +3,7 @@ def enter_garage(garage, car_id, entry_hour):
         raise ValueError
     if car_id in garage["cars"]:
         raise ValueError
+    if (not type(entry_hour) is int):
+        raise TypeError
     garage["cars"].append(car_id)
     return True
