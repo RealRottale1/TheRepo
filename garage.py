@@ -1,2 +1,2 @@
 def enter_garage():
-    pass
+    return True
