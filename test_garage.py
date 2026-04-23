@@ -49,4 +49,8 @@ def test_exitGarageCarNotInGarage():
         exit_garage(garage, 2)
 
 def test_get_available_spots():
-    assert get_available_spots() == True
+    garage = {
+        "capacity": 2,
+        "cars": {0: 2}
+    }
+    assert get_available_spots(garage) == 1
