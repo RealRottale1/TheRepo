@@ -16,4 +16,6 @@ def get_available_spots(garage):
     return max(garage["capacity"] - len(garage["cars"]), 0)
 
 def calculate_fee(hours, rate):
+    if (hours < 0) or (rate < 0):
+        raise ValueError
     return round(hours * rate, 2)
