@@ -1,5 +1,5 @@
 import pytest
-from garage import enter_garage, exit_garage, get_available_spots
+from garage import enter_garage, exit_garage, get_available_spots, calculate_fee
 
 def test_entergaragePass():
     garage = {
@@ -69,3 +69,6 @@ def test_get_available_spots_WhenOverFull():
         "cars": {0: 2, 1: 2}
     }
     assert get_available_spots(garage) == 0
+
+def test_calculate_fee():
+    assert calculate_fee() == True
