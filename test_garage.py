@@ -16,10 +16,10 @@ def test_enterFullGarage():
     with pytest.raises(ValueError):
         enter_garage(garage, 0, 2)
 
-def test_entergarageinvalidcarID():
+def test_entergaragealreadyInGarage():
     garage = {
         "capacity": 4,
-        "cars": {}
+        "cars": {0}
     }
     with pytest.raises(ValueError):
-        enter_garage(garage, "0", 2)
+        enter_garage(garage, 0, 2)
