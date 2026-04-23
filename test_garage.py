@@ -15,3 +15,11 @@ def test_enterFullGarage():
     }
     with pytest.raises(ValueError):
         enter_garage(garage, 0, 2)
+
+def test_entergarageinvalidcarID():
+    garage = {
+        "capacity": 4,
+        "cars": {}
+    }
+    with pytest.raises(ValueError):
+        enter_garage(garage, "0", 2)
