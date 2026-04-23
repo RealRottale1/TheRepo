@@ -19,7 +19,7 @@ def test_enterFullGarage():
 def test_entergaragealreadyInGarage():
     garage = {
         "capacity": 4,
-        "cars": {0}
+        "cars": {0: 2}
     }
     with pytest.raises(ValueError):
         enter_garage(garage, 0, 2)
@@ -33,4 +33,8 @@ def test_entergarageInvalidTimeType():
         enter_garage(garage, 0, "2")
 
 def test_exitGarage():
-    assert exit_garage() == True
+    garage = {
+        "capacity": 10,
+        "cars": {0: 2}
+    }
+    assert exit_garage(garage, 0) == True
