@@ -16,4 +16,4 @@ def get_available_spots(garage):
     return max(garage["capacity"] - len(garage["cars"]), 0)
 
 def calculate_fee():
-    pass
+    return True
