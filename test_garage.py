@@ -78,6 +78,17 @@ def test_calculate_fee():
     (10, -2),
     (-10, -2)
 ])
+
 def test_calculate_feeNegatives(hours, rate):
     with pytest.raises(ValueError):
+        calculate_fee(hours, rate)
+
+@pytest.mark.parametrize("hours, rate", [
+    ("-10", 2),
+    (10, "-2"),
+    ("-10", "-2")
+])
+
+def test_calculate_feeNonNumbers(hours, rate):
+    with pytest.raises(TypeError):
         calculate_fee(hours, rate)
