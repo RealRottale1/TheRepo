@@ -1,2 +1,2 @@
-def enter_garage():
+def enter_garage(garage):
     return True
