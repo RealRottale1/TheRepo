@@ -1,5 +1,5 @@
 import pytest
-from garage import enter_garage, exit_garage
+from garage import enter_garage, exit_garage, get_available_spots
 
 def test_entergaragePass():
     garage = {
@@ -47,3 +47,6 @@ def test_exitGarageCarNotInGarage():
     }
     with pytest.raises(KeyError):
         exit_garage(garage, 2)
+
+def test_get_available_spots():
+    assert get_available_spots() == True
