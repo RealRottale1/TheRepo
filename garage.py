@@ -8,5 +8,6 @@ def enter_garage(garage, car_id, entry_hour):
     garage["cars"][car_id] = entry_hour
     return True
 
-def exit_garage():
+def exit_garage(garage, car_id):
+    del garage["cars"][car_id]
     return True
