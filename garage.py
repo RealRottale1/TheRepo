@@ -12,5 +12,5 @@ def exit_garage(garage, car_id):
     del garage["cars"][car_id]
     return True
 
-def get_available_spots():
-    return True
+def get_available_spots(garage):
+    return garage["capacity"] - len(garage["cars"])
